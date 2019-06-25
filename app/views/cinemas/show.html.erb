@@ -16,12 +16,6 @@
   <p><%= review.user_name %></p>
 <% end %>
 
-<%= link_to "Delete", cinema_path(@cinema),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-
-<h2><%= link_to 'Update', edit_cinema_path(@cinema) %></h2>
-
 <h2><%= link_to 'Review', new_cinema_review_path(@cinema) %></h2>
 
 <h2><%= link_to 'Go back', cinemas_path %></h2>

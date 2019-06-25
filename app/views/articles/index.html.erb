@@ -22,7 +22,6 @@
 </p>
 <% end %>
 
-<h2><%= link_to 'New', new_article_path(@article) %></h2>
 <h2><% if params[:tag].present? %></h2>
 <h2><%=link_to 'Go Back', articles_path %></h2>
 <% end %>

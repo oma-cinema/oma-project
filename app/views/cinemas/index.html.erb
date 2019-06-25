@@ -1,10 +1,19 @@
+<% array = [] %>
 <% @cinemas.each do |cinema| %>
   <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
   <p><%= cinema.address %></p>
+  <% unless cinema.review_ids.empty? %>
+  <% nb_stars = cinema.reviews.average(:rating).round.to_i %>
+  <% nb_stars.times do %>
+    <span style="color: #2F2FA2"><i class="fas fa-star"></i></span>
+  <% end %>
+  <% (5 - nb_stars).times do %>
+    <span style="color: #2F2FA2"><i class="far fa-star"></i></span>
+  <% end %>
+  <p><%= cinema.reviews.count %> avis</p>
+  <% end %>
 <% end %>
 
-
-<h2><%= link_to 'New', new_cinema_path(@cinema) %></h2>
 
 <div
   id="map"
