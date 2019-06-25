@@ -48,6 +48,6 @@ class CinemasController < ApplicationController
   private
 
   def cinema_params
-    params.require(:cinema).permit(:name, :address)
+    params.require(:cinema).permit(:name, :address, :photo)
   end
 end
