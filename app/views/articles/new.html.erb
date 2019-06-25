@@ -1,0 +1,8 @@
+ <%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <!-- Add tags as a comma separated list -->
+  <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+  <!-- Add tags as checkboxes -->
+  <%= f.submit %>
+<% end %>

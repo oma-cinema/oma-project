@@ -1,0 +1,28 @@
+<% array = [] %>
+<% arr = [] %>
+<% @articles.each do |article| %>
+<% article.tag_list.each do |tage| %>
+<% array << tage %>
+<% end %>
+<% end %>
+<% array.uniq.each do |tag| %>
+<%= link_to tag, articles_path(tag: tag) %>
+<% end %>
+
+
+
+<% @articles.each do |article| %>
+<h2><%= link_to article.title, article_path(article) %></h2>
+<p><%= article.content %>
+  <br>
+  <br>
+  <% article.tag_list.each do |tag| %>
+  <%= link_to tag, articles_path(tag: tag) %>
+  <% end %>
+</p>
+<% end %>
+
+<h2><%= link_to 'New', new_article_path(@article) %></h2>
+<h2><% if params[:tag].present? %></h2>
+<h2><%=link_to 'Go Back', articles_path %></h2>
+<% end %>

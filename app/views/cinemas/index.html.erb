@@ -1,0 +1,16 @@
+<% @cinemas.each do |cinema| %>
+  <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
+  <p><%= cinema.address %></p>
+<% end %>
+
+
+<h2><%= link_to 'New', new_cinema_path(@cinema) %></h2>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
