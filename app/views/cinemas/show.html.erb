@@ -1,7 +1,7 @@
  <h2><%= @cinema.name %></h2>
 <p><%= @cinema.address %></p>
 <%= cl_image_tag @cinema.photo, height: 300, width: 400, crop: :fill %>
-
+<br>
 <% @reviews.each do |review| %>
 <!--   <h2><%= review.rating %></h2> -->
  <% unless review.rating.nil? %>
