@@ -8,7 +8,7 @@ const buildMap = () => {
     container: 'map1',
     style: 'mapbox://styles/mapbox/streets-v10',
     center: [2.3455562, 48.8753697], // starting position as [lng, lat]
-    zoom: 5
+    zoom: 12
   });
 };
 
@@ -20,3 +20,4 @@ const contactMapbox = () => {
 
 
 export { contactMapbox };
+
