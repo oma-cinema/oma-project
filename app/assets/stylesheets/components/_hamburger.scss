@@ -136,6 +136,9 @@ a:hover
   padding: 50px;
   height: 100vh;
   padding-top: 125px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 
   background: #ededed;
   list-style-type: none;

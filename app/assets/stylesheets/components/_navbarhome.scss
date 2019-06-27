@@ -54,8 +54,13 @@ Main components
 -------------------------------- */
 .cd-section {
   min-height: 100%;
-  position: relative;
+  display: flex;
   padding: 2em 0;
+  text-align: center;
+}
+
+.section {
+  margin: auto;
 }
 .cd-section:nth-of-type(odd) {
   background-color: #3e3947;
@@ -70,19 +75,19 @@ Main components
   color: #bda3ad;
 }
 .cd-section h1, .cd-section p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  max-width: 768px;
-  text-align: center;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // bottom: auto;
+  // right: auto;
+  // -webkit-transform: translateX(-50%) translateY(-50%);
+  // -moz-transform: translateX(-50%) translateY(-50%);
+  // -ms-transform: translateX(-50%) translateY(-50%);
+  // -o-transform: translateX(-50%) translateY(-50%);
+  // transform: translateX(-50%) translateY(-50%);
+  // width: 90%;
+  // max-width: 768px;
+  // text-align: center;
 }
 .cd-section h1 {
   color: white;

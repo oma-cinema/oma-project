@@ -27,18 +27,29 @@
     but hey, it's pure CSS magic.
     -->
     <ul id="menu">
+      <div>
+
       <% if user_signed_in? %>
       <a href="#"><li>What is Ōma ?</li></a>
       <a href="#"><li>Experience</li></a>
       <a><li><%= link_to "Locations", cinemas_path %></li></a>
-      <a href="#"><li>Contact</li></a>
+      <a><li><%= link_to "Contact", contact_path %></li></a>
       <a><li><%= link_to "Press", articles_path %></li></a>
       <% else %>
       <li class="nav-item">
         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
       </li>
       <% end %>
+      </div>
+    <div class="footer">
+      <div class="footer-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
     </ul>
+
   </div>
 </nav>
 </div>
