@@ -15,3 +15,6 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 
 initAutocomplete();
 
+import { contactMapbox } from '../plugins/init_contactbox';
+
+contactMapbox();

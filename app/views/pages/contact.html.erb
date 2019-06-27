@@ -4,25 +4,13 @@
       <li>
         <a href="#section1" data-number="1">
           <span class="cd-dot"></span>
-          <span class="cd-label">Intro</span>
+          <span class="cd-label">Contact info</span>
         </a>
       </li>
       <li>
         <a href="#section2" data-number="2">
           <span class="cd-dot"></span>
-          <span class="cd-label">Articles</span>
-        </a>
-      </li>
-      <li>
-        <a href="#section3" data-number="3">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Press Release</span>
-        </a>
-      </li>
-      <li>
-        <a href="#section4" data-number="4">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Kit Press</span>
+          <span class="cd-label">Contact form</span>
         </a>
       </li>
     </ul>
@@ -30,19 +18,30 @@
   <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
   <section id="section1" class="cd-section">
-    <h1>Press</h1>
-    <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+    <div class="section">
+      <h1>Contact</h1>
+      <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+    <div class="d-inline-flex justify-content-around contact-card">
+      <div class="contact-info">
+        <h1>Ōma</h1>
+        <h3>38, rue de Trévise</h3>
+        <h3>75009 Paris</h3>
+        <h3>France</h3>
+        <h4>+33 1 42 00 11 24</h4>
+        <h4>nchican@omacinema.com</h4>
+      </div>
+
+      <div id="map1" style="width: 200px; height: 600px;" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+
+
+
+
+
+    </div>
   </section><!-- cd-section -->
 
   <section id="section2" class="cd-section">
     <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
   </section><!-- cd-section -->
-
-  <section id="section3" class="cd-section">
-    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-  </section><!-- cd-section -->
-
-  <section id="section4" class="cd-section">
-    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-  </section><!-- cd-section -->
-<!-- cd-section -->

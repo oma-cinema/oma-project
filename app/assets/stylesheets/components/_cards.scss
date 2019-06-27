@@ -4,3 +4,36 @@
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
+
+.article-card:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+}
+
+.card-body {
+  background: #735260;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.card {
+  background-color: #3E3946;
+  border:none;
+}
+
+.card:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+}
+
+.contact-card {
+  width: 100%;
+  display: flex;
+}
+
+.contact-info {
+  margin: auto;
+}
