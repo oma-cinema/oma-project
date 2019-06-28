@@ -1,19 +1,27 @@
 .form-post {
-  background: white;
-  margin-top: 50px;
-  padding: 20px;
-  border-radius: 5px;
-  h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    color: #666666;
-    margin-bottom: 50px;
-    margin-top: 0px;
-  }
   .btn {
     width: 100%;
     padding: 10px;
     font-weight: bold;
   }
+  h1 {
+    padding-bottom: 30px;
+  }
+}
+
+#message_body {
+  height: 200px;
+  background-color: transparent;
+}
+
+#message_name {
+  background-color: transparent;
+}
+
+#message_email {
+  background-color: transparent;
+}
+
+.message_body {
+  margin-top: 30px;
 }
