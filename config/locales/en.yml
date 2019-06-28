@@ -1,3 +1,6 @@
 en:
-  hello: "Coucou"
+  hello: "Hello world"
 
+  message_mailer:
+    contact_me:
+      subject: "Message from www.murdo.ch"

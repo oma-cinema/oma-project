@@ -38,5 +38,28 @@
 
   <section id="section2" class="cd-section">
     <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-sm-offset-3">
+          <div class="form-post">
+            <h1>Contact Us</h1>
+              <%= simple_form_for(@message, url: create_message_url) do |f| %>
+              <%= notice %>
+              <%= @message.errors.full_messages.join(', ') %>
+              <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                  <%= f.input :name, placeholder: "name" %>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                  <%= f.input :email, placeholder: 'email' %>
+                </div>
+              </div>
+              <%= f.input :body, placeholder: 'your message...' %>
+              <%= f.submit 'Send' %>
+            <% end %>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
   </section><!-- cd-section -->

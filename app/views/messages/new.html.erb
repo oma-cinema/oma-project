@@ -1,0 +1,16 @@
+        <%= simple_form_for(@message, url: create_message_url) do |f| %>
+          <%= notice %>
+          <%= @message.errors.full_messages.join(', ') %>
+          <div class="row">
+            <div class="col-xs-6">
+          <%= f.input :name, placeholder: "How to design a form" %>
+          </div>
+          <div class="col-xs-6">
+          <%= f.input :email, placeholder: 'email' %>
+          </div>
+        </div>
+          <%= f.input :body, placeholder: 'body' %>
+          <%= f.submit 'Send' %>
+        <% end %>
+
+
