@@ -1,0 +1,16 @@
+.cinema-section {
+  min-height: 100%;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.cinema-card {
+  background-color: white !important;                         /* White background */
+  padding: 30px !important;
+  margin: 50px;
+  text-align: left;                       /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

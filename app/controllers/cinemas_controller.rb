@@ -6,7 +6,9 @@ class CinemasController < ApplicationController
     @markers = @cinemas.map do |cinema|
       {
         lat: cinema.latitude,
-        lng: cinema.longitude
+        lng: cinema.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { cinema: cinema })
+
       }
     end
   end
