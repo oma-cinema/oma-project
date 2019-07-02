@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'contact-me', to: 'messages#create', as: 'create_message'
   root to: 'pages#home'
   get 'contact', to: 'pages#contact', as: :contact
+  get 'ōma', to: 'pages#ōma', as: :oma
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :articles
   resources :cinemas do
