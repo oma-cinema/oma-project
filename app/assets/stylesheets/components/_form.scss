@@ -6,12 +6,15 @@
   }
   h1 {
     padding-bottom: 30px;
+    font-size: 40px;
+    font-weight: bold;
   }
 }
 
 #message_body {
   height: 200px;
   background-color: transparent;
+  color: white;
 }
 
 #message_name {
@@ -24,4 +27,14 @@
 
 .message_body {
   margin-top: 30px;
+}
+
+.form-control-label {
+  display: none;
+}
+
+.form-control {
+  height: 6rem;
+  font-size: 20px;
+  color: white;
 }

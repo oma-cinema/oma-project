@@ -1,9 +1,11 @@
 .btn-primary {
-  font-size: 30px;
+  font-size: 20px;
   padding: 10px;
-  background-color: #216583 !important;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-top: 30px;
 }
 
 .btn-primary:hover {
-  background-color: #211583 !important;
+  background-color:  #ff3666;
 }
