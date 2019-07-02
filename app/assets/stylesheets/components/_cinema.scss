@@ -6,11 +6,26 @@
 
 .cinema-card {
   background-color: white !important;                         /* White background */
-  padding: 30px !important;
-  margin: 50px;
+  padding: 3.25rem 3rem 3.75rem;
+  height: 25rem;
+  margin: 130px;
   text-align: left;                       /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   background-size: cover;
   background-repeat: no-repeat;
+  h2 {
+    font-size: 30px !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+  }
+  p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+  }
+}
+
+.container {
+  text-align: center;
+  padding-top: 50px;
 }

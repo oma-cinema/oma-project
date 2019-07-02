@@ -23,43 +23,54 @@
   </nav>
   <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
-  <section id="section1" class="cd-section">
+  <section id="section1" class="cd-section home1">
     <div class="section">
     <h1>Location</h1>
     <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
     </div>
   </section><!-- cd-section -->
 
-  <section id="section2" class="cinema-section">
-    <% array = [] %>
-    <% @cinemas.each do |cinema| %>
-      <div class="cinema-card">
-        <a href="/cinemas/<%=cinema.id%>">
-          <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
-          <p><%= cinema.address %></p>
-          <% unless cinema.review_ids.empty? %>
-            <% nb_stars = cinema.reviews.average(:rating).round.to_i %>
-            <% nb_stars.times do %>
-              <span style="color: #2F2FA2"><i class="fas fa-star"></i></span>
-            <% end %>
-            <% (5 - nb_stars).times do %>
-              <span style="color: #2F2FA2"><i class="far fa-star"></i></span>
-           <% end %>
-           <p><%= cinema.reviews.count %> avis</p>
-          <% end %>
-        </a>
-      </div>
-    <% end %>
-  </section><!-- cd-section -->
-<!--
-  <section id="section3" class="cinema-section">
-  </section><!-- cd-section --> -->
+  <section id="section2" >
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+    <div class="container">
+      <ul class="tabs">
+        <li class="btn btn-primary active"><a href="#tab1"></a>Voir la liste</li>
+        <li class="btn btn-primary active"><a href="#tab2"></a>Voir la carte</li>
+      </ul>
+    </div>
+
+
+    <div class="article" id="tab1">
+      <% array = [] %>
+      <% @cinemas.each do |cinema| %>
+        <div class="cinema-card">
+          <a href="/cinemas/<%=cinema.id%>">
+            <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
+            <p><%= cinema.address %></p>
+            <h3><%= link_to 'Détails', cinema_path(cinema) %></h3>
+            <br>
+            <% unless cinema.review_ids.empty? %>
+              <% nb_stars = cinema.reviews.average(:rating).round.to_i %>
+              <% nb_stars.times do %>
+                <span style="color: #191E55"><i class="fas fa-star"></i></span>
+              <% end %>
+              <% (5 - nb_stars).times do %>
+                <span style="color: #191E55"><i class="far fa-star"></i></span>
+             <% end %>
+             <p><%= cinema.reviews.count %> avis</p>
+            <% end %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="article" id="tab2">
+      <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
+
+  </section>
+
+
 
