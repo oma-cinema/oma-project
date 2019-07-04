@@ -17,7 +17,6 @@ html * {
 body {
   font-size: 100%;
   font-family: "Ubuntu", sans-serif;
-  color: #191E55;
   background-color: white;
 }
 
@@ -55,7 +54,7 @@ Main components
 .cd-section {
   min-height: 100%;
   display: flex;
-  padding: 2em 0;
+  padding: 0;
   text-align: center;
   #map1 {
     text-align: left !important;
@@ -63,13 +62,12 @@ Main components
 }
 
 .section {
-  margin: auto;
+  margin: 0 auto;
 }
 .cd-section:nth-of-type(odd) {
   background-color: #FFFFFF;
 }
 .cd-section:nth-of-type(odd) p {
-  color: #191E55;
 }
 .cd-section:nth-of-type(even) {
   background-color: #191E55;
