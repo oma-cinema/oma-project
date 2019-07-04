@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
+
+
 <%= content_for(:navbar_class, "navbar-home") %>
 <nav id="cd-vertical-nav">
   <ul style="list-style: none;">
@@ -36,7 +41,7 @@
   </div>
 </section><!-- cd-section -->
 
-<section id="section2" class="cd-section d-flex">
+<section id="section2" class="cd-section">
   <div class="section">
     <h1 class="pb-5">Press Articles</h1>
     <% array = [] %>
@@ -49,48 +54,26 @@
     <% array.uniq.each do |tag| %>
       <h3 class="pb-5"><%= link_to tag, articles_path(tag: tag) %></h3>
     <% end %>
-      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-      <!--Controls-->
-        <div class="controls-top pb-5">
-          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-          class="fas fa-chevron-right"></i></a>
-        </div>
-        <div class="carousel-inner" role="listbox">
-      <!--First slide-->
-          <div class="carousel-item active d-flex">
-          <% @articles.each do |article| %>
-            <div class="col-md-4">
-              <div class="card mb-2">
-                <div class="card-body">
-                  <div class="d-inline-flex">
-                    <div class="article-card">
-                      <h1><%= link_to article.title, article_path(article) %></h1>
-                        <p><%= article.content %>
-                        <br>
-                        <br>
-                        <% article.tag_list.each do |tag| %>
-                          <%= link_to tag, articles_path(tag: tag) %>
-                          <% end %>
-                        </p>
-                        <a class="btn btn-primary">See more</a>
-                   </div>
-                 </div>
-               </div>
-              </div>
-            </div>
-          <% end %>
+      <div class="carousel-wrapper">
+       <div class="carousel" data-flickity>
+        <% @articles.each do |article| %>
+        <div class="carousel-cell">
+          <h1><%= link_to article.title, article_path(article) %></h1>
+            <p><%= article.content %>
+            <br>
+            <br>
+            <% article.tag_list.each do |tag| %>
+              <%= link_to tag, articles_path(tag: tag) %>
+              <% end %>
+            </p>
+            <a class="more" href="">Explore more</a>
           </div>
-        </div>
+          <% end %>
+        <h2><% if params[:tag].present? %></h2>
+        <h2><%=link_to 'Go Back', articles_path %></h2>
+       </div>
       </div>
-    <h2><% if params[:tag].present? %></h2>
-    <h2><%=link_to 'Go Back', articles_path %></h2>
     <% end %>
-    <ol class="carousel-indicators pt-5">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-  </ol>
   </div>
 </section>
 <!-- cd-section -->
