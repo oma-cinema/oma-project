@@ -34,6 +34,11 @@
 }
 
 .foyer-text {
-  margin: 0 auto;
+  padding-left: 100px;
+  padding-top: 200px;
+  padding-right: 0px;
   text-align: left;
+  ul {
+    padding-left: 0px;
+  }
 }
