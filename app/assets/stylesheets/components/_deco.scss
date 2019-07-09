@@ -50,3 +50,21 @@
   top: -100px;
   left: -10%;
 }
+
+.petit-carre-bleu {
+  height: 30vh;
+  background-color: $blue;
+}
+
+.grand-carre-bleu {
+  height: 30vh;
+  background-color: $blue;
+}
+
+.grand_carre_star_wars {
+  position: relative;
+  width: 50%;
+  top: 200px;
+  z-index: 1;
+  right: 100px;
+}
