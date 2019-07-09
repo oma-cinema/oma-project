@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
+
+
+<%= content_for(:navbar_class, "navbar-home") %>
+<nav id="cd-vertical-nav">
+  <ul style="list-style: none;">
+    <li>
+      <a href="#section1" data-number="1">
+        <span class="cd-dot"></span>
+        <span class="cd-label">Intro</span>
+      </a>
+    </li>
+    <li>
+      <a href="#section2" data-number="2">
+        <span class="cd-dot"></span>
+        <span class="cd-label">Articles</span>
+      </a>
+    </li>
+    <li>
+      <a href="#section3" data-number="3">
+        <span class="cd-dot"></span>
+        <span class="cd-label">Press Release</span>
+      </a>
+    </li>
+    <li>
+      <a href="#section4" data-number="4">
+        <span class="cd-dot"></span>
+        <span class="cd-label">Kit Press</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+
+<section id="section1" class="cd-section fond-article">
+  <div class="container">
+    <div class="row justify-content-center d-flex">
+      <h1>Press</h1>
+      <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+    </div>
+  </div>
+</section><!-- cd-section -->
+
+<section id="section2" class="cd-section">
+  <div class="container flex-column justify-content-center">
+    <div class="row flex-column">
+      <h1 class="pb-5">Press Articles</h1>
+      <% array = [] %>
+      <% @articles.each do |article| %>
+        <% article.tag_list.each do |tage| %>
+          <% array << tage %>
+        <% end %>
+      <% end %>
+      <% array.uniq.each do |tag| %>
+        <h2 class="pb-5"><%= link_to tag, articles_path(tag: tag) %></h2>
+      <% end %>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center" style=" height: 55%">
+    <div class="carousel-wrapper col-12">
+      <div class="carousel" data-flickity>
+        <% @articles.each do |article| %>
+          <div class="carousel-cell">
+            <h1><%= link_to article.title, article_path(article) %></h1>
+            <p><%= article.content %>
+            <br>
+            <br>
+            <% article.tag_list.each do |tag| %>
+              <%= link_to tag, articles_path(tag: tag) %>
+            <% end %>
+            </p>
+            <a class="more" href="">Explore more</a>
+          </div>
+        <% end %>
+     <h2><% if params[:tag].present? %></h2>
+          <h2><%=link_to 'Go Back', articles_path %></h2>
+      </div>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- cd-section -->
+
+<section id="section3" class="cd-section">
+  <div class="section">
+    <h1 class="pb-5">Press Releases</h1>
+
+  <!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  <!--Controls-->
+  <div class="controls-top pb-5">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active d-flex">
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h4 class="card-title">Press Release 2018</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h4 class="card-title">Press Release 2019</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h4 class="card-title">Press release 2020</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ol class="carousel-indicators pt-5">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li data-target="#multi-item-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Slides-->
+</div>
+  </div>
+<!--/.Carousel Wrapper-->
+</section><!-- cd-section -->
+
+<section id="section4" class="cd-section">
+  <div class="section">
+    <h1 class="pb-5">Press Info</h1>
+    <h2>Contact</h2>
+    <h3>Nicolas Chican</h3>
+    <h5>nchican@omacinema.com</h5>
+    <br>
+    <br>
+    <a class="btn btn-primary">Press kit</a>
+  </div>
+</section><!-- cd-section -->
+<!-- cd-section -->

@@ -6,7 +6,7 @@
 .carousel-wrapper {
   position: relative;
   width: 70%;
-  height: 60%;
+  height: 100%;
   top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -23,7 +23,6 @@
 }
 .carousel-wrapper .carousel .carousel-cell {
   padding: 10px;
-  background-color: #FFFFFF;
   width: 20%;
   height: auto;
   min-width: 120px;
@@ -40,6 +39,15 @@
   text-decoration: none;
   transition: opacity 300ms ease;
 }
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
 .carousel-wrapper .carousel .carousel-cell .more:hover, .carousel-wrapper .carousel .carousel-cell .more:active, .carousel-wrapper .carousel .carousel-cell .more:visited, .carousel-wrapper .carousel .carousel-cell .more:focus {
   color: #CFCFCF;
   text-decoration: none;
