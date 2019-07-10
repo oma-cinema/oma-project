@@ -48,6 +48,6 @@
   def article_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:article).permit(:title, :content, :tag_list, :photo)
+    params.require(:article).permit(:title, :content, :tag_list, :photo, :source)
   end
 end

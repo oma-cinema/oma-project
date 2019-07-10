@@ -4,6 +4,8 @@
   <!-- Add tags as a comma separated list -->
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :source %>
+  <%= f.input :source_cache, as: :hidden %>
   <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
   <!-- Add tags as checkboxes -->
   <%= f.submit %>

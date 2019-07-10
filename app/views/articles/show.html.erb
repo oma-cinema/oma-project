@@ -1,12 +1,27 @@
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
-
-<h3>Related Articles</h3>
-<ul>
-  <% @related_articles.each do |r| %>
-    <li><%= r.title %></li>
-  <% end %>
-</ul>
+<%= content_for(:navbar_class, "navbar-home") %>
+<div class="article-page">
+  <div class="d-flex justify-content-center article-source">
+    <p>
+    <%= cl_image_tag @article.source %>
+    </p>
+  </div>
+  <div class="article-content flex-column justify-content-center">
+      <h1><%= @article.title %></h1>
+      <p><%= @article.date %></p>
+      <p class='mb-5'>
+        <%= cl_image_tag @article.photo %>
+      </p>
+      <h3 class="text-justify"><%= @article.content %></h3>
+  </div>
+  <div class="article-content">
+    <h3>Related Articles</h3>
+    <ul>
+      <% @related_articles.each do |r| %>
+        <li><%= r.title %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <%= link_to "Delete", article_path(@article),
       method: :delete,

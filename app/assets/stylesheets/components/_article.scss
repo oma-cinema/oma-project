@@ -1,0 +1,23 @@
+.article-page {
+  background-color: #F5F6F8 !important;
+}
+
+.article-source {
+  background: white;                         /* White background */                            /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.article-content {
+  margin: 150px;
+  background: white;                         /* White background */
+  padding: 40px;                             /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  p {
+    color: #2A303A;
+  }
+  h1, h3 {
+    color: #2A303A;
+  }
+}
