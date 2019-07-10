@@ -26,6 +26,7 @@ gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'bourbon'
 gem 'jquery-rails'
 
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

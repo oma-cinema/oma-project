@@ -10,12 +10,43 @@ RailsAdmin.config do |config|
   #   warden.authenticate! scope: :user
   # end
   # config.current_user_method(&:current_user)
+  config.model Article do
+      create do
+        field :tag_list
+        field :title
+        field :url_article
+        field :photo
+        field :content
+        field :date
+        field :source
+        end
+      update do
+        field :tag_list
+        field :title
+        field :url_article
+        field :photo
+        field :content
+        field :date
+        field :source
+      end
 
+      show do
+        field :tag_list
+        field :title
+        field :url_article
+        field :photo
+        field :content
+        field :date
+        field :source
+        end
+
+    end
   ## == Cancan ==
   # config.authorize_with :cancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
+
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
@@ -25,7 +56,6 @@ RailsAdmin.config do |config|
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
-
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory

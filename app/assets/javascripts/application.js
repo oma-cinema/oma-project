@@ -1,6 +1,9 @@
 //= require jquery
 //= require jquery_ujs
 
+
+
+
 jQuery(document).ready(function($){
   var contentSections = $('.cd-section'),
     navigationItems = $('#cd-vertical-nav a');
@@ -50,6 +53,7 @@ jQuery(document).ready(function($){
         );
   }
 });
+
 
     // Icons Filling Effect - by CodyHouse.co
 

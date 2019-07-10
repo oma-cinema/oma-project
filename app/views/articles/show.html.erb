@@ -2,32 +2,41 @@
 <div class="article-page">
   <div class="d-flex justify-content-center article-source">
     <p>
-    <%= cl_image_tag @article.source %>
+    <%= cl_image_tag @article.source, height: 200, crop: :fill %>
     </p>
   </div>
-  <div class="article-content flex-column justify-content-center">
-      <h1><%= @article.title %></h1>
-      <p><%= @article.date %></p>
-      <p class='mb-5'>
-        <%= cl_image_tag @article.photo %>
-      </p>
-      <h3 class="text-justify"><%= @article.content %></h3>
-  </div>
-  <div class="article-content">
-    <h3>Related Articles</h3>
-    <ul>
-      <% @related_articles.each do |r| %>
-        <li><%= r.title %></li>
-      <% end %>
-    </ul>
+  <div class="mt-5 d-flex">
+    <div class="article-content flex-column justify-content-center text-left col-12 col-lg-8 ml-5">
+        <h1><%= @article.title %></h1>
+        <p><%= @article.date %></p>
+        <p class='mb-5'>
+          <%= cl_image_tag @article.photo, width: 800, crop: :fill %>
+        </p>
+        <h3 class="text-justify"><%= @article.content %></h3>
+    </div>
+    <div class="col-12 col-lg-3 ml-5 article-annexe">
+      <div class="sticky-top">
+        <div class="article-content mb-5">
+          <h1>Catégories</h1>
+          <ul>
+          <% @article.tag_list.each do |tag| %>
+            <li>
+            <%= link_to tag, articles_path(tag: tag) %>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+        <div class="article-content">
+          <h3>Related Articles</h3>
+          <ul>
+            <% @related_articles.each do |r| %>
+              <li><%= link_to r.title, article_path(r) %></li>
+            <% end %>
+          </ul>
+          <h2><%= link_to 'Go back', articles_path %></h2>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<%= link_to "Delete", article_path(@article),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-
-<h2><%= link_to 'Update', edit_article_path(@article) %></h2>
-
-<h2><%= link_to 'Go back', articles_path %></h2>
 
