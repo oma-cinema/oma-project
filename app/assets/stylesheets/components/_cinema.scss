@@ -7,12 +7,13 @@
 .cinema-card {
   background-color: white !important;                         /* White background */
   padding: 3.25rem 3rem 3.75rem;
-  height: 25rem;
+  height: 19rem;
   margin: 130px;
   text-align: left;                       /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   background-size: cover;
+   background-position: center;
   background-repeat: no-repeat;
   h2 {
     font-size: 30px !important;
@@ -22,6 +23,7 @@
   p {
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
+    color: $blue;
   }
 }
 
@@ -39,4 +41,12 @@
 
 .row {
   width: 100%;
+}
+
+.list-card:hover {
+  color: $blue;
+}
+
+.index-cinema {
+  background-color: $blue;
 }

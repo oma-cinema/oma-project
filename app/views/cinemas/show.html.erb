@@ -1,54 +1,84 @@
 <%= content_for(:navbar_class, "navbar-home") %>
-<nav id="cd-vertical-nav">
-    <ul style="list-style: none;">
-      <li>
-        <a href="#section1" data-number="1">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Intro</span>
-        </a>
-      </li>
-      <li>
-        <a href="#section2" data-number="2">
-          <span class="cd-dot"></span>
-          <span class="cd-label">About</span>
-        </a>
-      </li>
-      <li>
-        <a href="#section3" data-number="3">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Features</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+
 
   <section id="section1" class="cd-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @cinema.photo, height: 300, width: 400, crop: :fill, background_size: :cover; %>')">
-    <div class="section">
-    <h2><%= @cinema.name %></h2>
-    <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+         url('<%= cl_image_path @cinema.photo, background_size: :cover ; %>')">
+    <div class="container">
+      <div class="row flex-column">
+        <h2><%= @cinema.name %></h2>
+        <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+        </div>
     </div>
+
   </section><!-- cd-section -->
+  <div class="mt-5 d-flex">
+    <div style=" width: 100%" class="col-8">
+      <div class="article-content flex-column justify-content-center text-left col-12 col-lg-12 ml-5 mb-5">
+          <h1><%= @cinema.name %></h1>
+          <p><%= @cinema.address %></p>
+          <p><%= @cinema.number_of_seats %></p>
+          <p class='mb-5'>
+            <%= @cinema.description %>
+          </p>
+      </div>
+      <div class="article-content flex-column justify-content-center text-left col-12 col-lg-12 ml-5 mt-5">
+        <% @reviews.each do |review| %>
+         <% unless review.rating.nil? %>
+              <% nb_stars = review.rating.round.to_i %>
+              <% nb_stars.times do %>
+                <span style="color: #2F2FA2"><i class="fas fa-star"></i></span>
+              <% end %>
+              <% (5 - nb_stars).times do %>
+                <span style="color: #2F2FA2"><i class="far fa-star"></i></span>
+              <% end %>
+             <% end %>
+          <p><%= review.content %></p>
+          <p><%= review.user_name %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 ml-5 article-annexe">
+      <div class="sticky-top">
+        <div class="article-content mb-5 article-tag">
+          <!-- <h2><%#= link_to 'Laisser un avis', new_cinema_review_path(@cinema) %></h2> -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Laissez un avis
+          </button>
+        </div>
+        <div class="article-content related-articles">
+          <h2><%= link_to 'Go back', cinemas_path %></h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <section id="section2" >
-    <% @reviews.each do |review| %>
-<!--   <h2><%= review.rating %></h2> -->
-     <% unless review.rating.nil? %>
-          <% nb_stars = review.rating.round.to_i %>
-          <% nb_stars.times do %>
-            <span style="color: #2F2FA2"><i class="fas fa-star"></i></span>
-          <% end %>
-          <% (5 - nb_stars).times do %>
-            <span style="color: #2F2FA2"><i class="far fa-star"></i></span>
-          <% end %>
-         <% end %>
-      <p><%= review.content %></p>
-      <p><%= review.user_name %></p>
-    <% end %>
 
-<h2><%= link_to 'Review', new_cinema_review_path(@cinema) %></h2>
 
-<h2><%= link_to 'Go back', cinemas_path %></h2>
 
-  </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@cinema, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience"%>
+        <%= f.input :user_name %>
+        <%= f.submit "add a review", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

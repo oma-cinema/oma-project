@@ -24,42 +24,43 @@
   <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
   <section id="section1" class="cd-section home1">
-    <div class="section">
-    <h1>Location</h1>
-    <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+    <div class="container">
+      <div class="row flex-column">
+        <h1>Location</h1>
+        <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+      </div>
     </div>
   </section><!-- cd-section -->
 
-  <section id="section2" >
+  <section id="section2" class="index-cinema">
 
-    <div class="container">
+    <div class="row d-flex justify-content-center">
       <ul class="tabs">
-        <li class="btn btn-primary active"><a href="#tab1"></a>Voir la liste</li>
-        <li class="btn btn-primary active"><a href="#tab2"></a>Voir la carte</li>
+        <li class="btn btn-primary active liste-card"><a href="#tab1"></a>Voir la liste</li>
+        <li class="btn btn-primary active liste-card"><a href="#tab2"></a>Voir la carte</li>
       </ul>
     </div>
+
 
 
     <div class="article" id="tab1">
       <% array = [] %>
       <% @cinemas.each do |cinema| %>
-        <div class="cinema-card">
-          <a href="/cinemas/<%=cinema.id%>">
-            <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
-            <p><%= cinema.address %></p>
-            <h3><%= link_to 'Détails', cinema_path(cinema) %></h3>
-            <br>
-            <% unless cinema.review_ids.empty? %>
-              <% nb_stars = cinema.reviews.average(:rating).round.to_i %>
-              <% nb_stars.times do %>
-                <span style="color: #191E55"><i class="fas fa-star"></i></span>
-              <% end %>
-              <% (5 - nb_stars).times do %>
-                <span style="color: #191E55"><i class="far fa-star"></i></span>
-             <% end %>
-             <p><%= cinema.reviews.count %> avis</p>
+        <div class="cinema-card" style="background-image: linear-gradient(0.25turn, rgba(250,250,250,1), rgba(0,0,0,0.2)), url('<%= cl_image_path cinema.photo %>')">
+          <h2><%= link_to cinema.name, cinema_path(cinema) %></h2>
+          <p><%= cinema.address %></p>
+          <h3><%= link_to 'Détails', cinema_path(cinema) %></h3>
+          <br>
+          <% unless cinema.review_ids.empty? %>
+            <% nb_stars = cinema.reviews.average(:rating).round.to_i %>
+            <% nb_stars.times do %>
+              <span style="color: #191E55"><i class="fas fa-star"></i></span>
             <% end %>
-          </a>
+            <% (5 - nb_stars).times do %>
+              <span style="color: #191E55"><i class="far fa-star"></i></span>
+            <% end %>
+            <p><%= cinema.reviews.count %> avis</p>
+            <% end %>
         </div>
       <% end %>
     </div>

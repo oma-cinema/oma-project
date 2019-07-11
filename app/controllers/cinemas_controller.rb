@@ -16,6 +16,10 @@ class CinemasController < ApplicationController
   def show
     @cinema = Cinema.find(params[:id])
     @reviews = Review.where(cinema_id: @cinema.id)
+
+    @review = Review.new
+    # we need `cinema_id` to asssociate review with corresponding cinema
+    @review.save
   end
 
   def new
