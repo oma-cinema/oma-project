@@ -11,7 +11,7 @@
 
 .article-content {
   background: white;                         /* White background */
-  padding: 40px;                             /* Internal space */
+  padding: 30px;                             /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   p {
@@ -19,5 +19,21 @@
   }
   h1, h3 {
     color: #2A303A;
+    padding-bottom: 10px;
+  }
+  ul {
+    padding-left: 0px;
+  }
+}
+
+.related-articles {
+  color: $blue;
+  a {
+    color: $blue;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  ul {
+    padding-left: 25px !important;
   }
 }

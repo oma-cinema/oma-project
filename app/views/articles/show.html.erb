@@ -16,9 +16,9 @@
     </div>
     <div class="col-12 col-lg-3 ml-5 article-annexe">
       <div class="sticky-top">
-        <div class="article-content mb-5">
+        <div class="article-content mb-5 article-tag">
           <h1>Catégories</h1>
-          <ul>
+          <ul class='d-flex'>
           <% @article.tag_list.each do |tag| %>
             <li>
             <%= link_to tag, articles_path(tag: tag) %>
@@ -26,8 +26,8 @@
           <% end %>
           </ul>
         </div>
-        <div class="article-content">
-          <h3>Related Articles</h3>
+        <div class="article-content related-articles">
+          <h1>Related Articles</h1>
           <ul>
             <% @related_articles.each do |r| %>
               <li><%= link_to r.title, article_path(r) %></li>

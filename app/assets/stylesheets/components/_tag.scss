@@ -1,0 +1,21 @@
+.article-tag {
+  li{
+    margin-top: 20px;
+    margin-right: 20px;
+    list-style: none;
+  }
+  a {
+      background-color: $blue;
+      color: white;
+      box-shadow: 2px 2px 5px white;
+      padding: 8px;
+  }
+}
+
+.article-tag {
+  a:hover {
+    border: 2px solid $blue;
+    color: $blue;
+    background-color: white;
+  }
+}
