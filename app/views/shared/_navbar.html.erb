@@ -18,23 +18,23 @@
     They are acting like a real hamburger,
     not that McDonalds stuff.
     -->
-    <span id="cbo"></span>
+    <span id="cbo" style="background: white;"></span>
     <span></span>
-    <span id="tasty"></span>
+    <span id="tasty" style="background: white;"></span>
 
     <!--
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
-    <ul id="menu">
+    <ul id="menu" class="justify-content-center align-items-center text-center">
       <div>
 
       <% if user_signed_in? %>
-      <a><li><%= link_to "What is Ōma ?", oma_path %></li></a>
-      <a><li><%= link_to "Experience", experience_path %></li></a>
-      <a><li><%= link_to "Locations", cinemas_path %></li></a>
-      <a><li><%= link_to "Contact", contact_path %></li></a>
-      <a><li><%= link_to "Press", articles_path %></li></a>
+      <a><li><%= link_to "WHAT IS ŌMA ?", oma_path %></li></a>
+      <a><li><%= link_to "EXPERIENCE", experience_path %></li></a>
+      <a><li><%= link_to "LOCATIONS", cinemas_path %></li></a>
+      <a><li><%= link_to "CONTACT", contact_path %></li></a>
+      <a><li><%= link_to "PRESS", articles_path %></li></a>
       <% else %>
       <li class="nav-item">
         <%= link_to "Login", new_user_session_path, class: "nav-link" %>

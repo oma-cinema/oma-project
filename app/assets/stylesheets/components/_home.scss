@@ -38,3 +38,9 @@
   background-size: cover;
   padding: 0px !important;
 }
+
+.mini-title {
+  h3 {
+    transform: rotate(-90deg);
+  }
+}

@@ -29,3 +29,15 @@
 #menuToggle {
   width: 70%;
 }
+
+#menu {
+  margin: -68px 0 0 -50px !important;
+  width: 100vw !important;
+  background-color: $blue !important;
+  opacity: 0.9;
+  a {
+    color: white !important;
+    font-size: 60px;
+    font-weight: bold;
+  }
+}

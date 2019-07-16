@@ -198,8 +198,8 @@ Main components
   position: relative;
   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
   top: 8px;
-  height: 12px;
-  width: 12px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background-color: #d88683;
   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
@@ -212,23 +212,23 @@ Main components
   transform-origin: 50% 50%;
 }
 
-#cd-vertical-nav .cd-dot {
-  position: relative;
-  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-  top: 8px;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: #d88683;
-  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-  transition: transform 0.2s, background-color 0.5s;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
+// #cd-vertical-nav .cd-dot {
+//   position: relative;
+//   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+//   top: 8px;
+//   height: 12px;
+//   width: 12px;
+//   border-radius: 50%;
+//   background-color: #d88683;
+//   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+//   -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+//   transition: transform 0.2s, background-color 0.5s;
+//   -webkit-transform-origin: 50% 50%;
+//   -moz-transform-origin: 50% 50%;
+//   -ms-transform-origin: 50% 50%;
+//   -o-transform-origin: 50% 50%;
+//   transform-origin: 50% 50%;
+// }
 
 
 

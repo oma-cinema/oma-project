@@ -16,30 +16,34 @@
       <div class="article-content flex-column justify-content-center text-left col-12 col-lg-12 ml-5 mb-5">
           <h1><%= @cinema.name %></h1>
           <p><%= @cinema.address %></p>
-          <p><%= @cinema.number_of_seats %></p>
+          <p><%= @cinema.number_of_seats %> - fauteuils</p>
           <p class='mb-5'>
             <%= @cinema.description %>
           </p>
       </div>
       <div class="article-content flex-column justify-content-center text-left col-12 col-lg-12 ml-5 mt-5">
+        <h1>Avis</h1>
         <% @reviews.each do |review| %>
+        <h4><%= review.user_name %></h4>
          <% unless review.rating.nil? %>
               <% nb_stars = review.rating.round.to_i %>
               <% nb_stars.times do %>
-                <span style="color: #2F2FA2"><i class="fas fa-star"></i></span>
+                <span style="color: #191E55"><i class="fas fa-star"></i></span>
               <% end %>
               <% (5 - nb_stars).times do %>
-                <span style="color: #2F2FA2"><i class="far fa-star"></i></span>
+                <span style="color: #191E55"><i class="far fa-star"></i></span>
               <% end %>
              <% end %>
-          <p><%= review.content %></p>
-          <p><%= review.user_name %></p>
+          <%= review.content %>
+          <p class="tiret mt-3"></p>
+
         <% end %>
       </div>
     </div>
     <div class="col-12 col-lg-3 ml-5 article-annexe">
       <div class="sticky-top">
         <div class="article-content mb-5 article-tag">
+          <a href="cinema.url_cinema">Réserver</a>
           <!-- <h2><%#= link_to 'Laisser un avis', new_cinema_review_path(@cinema) %></h2> -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
             Laissez un avis
@@ -62,7 +66,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Laissez un avis</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -74,10 +78,6 @@
         <%= f.input :user_name %>
         <%= f.submit "add a review", class: "btn btn-primary" %>
       <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
