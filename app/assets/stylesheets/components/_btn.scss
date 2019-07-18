@@ -11,3 +11,15 @@
   color: $blue;
   border: 1px solid $blue;
 }
+
+.fa-chevron-down {
+  position: relative;
+  top: 35vh;
+  color: white;
+
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}

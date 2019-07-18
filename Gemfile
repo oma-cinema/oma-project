@@ -26,6 +26,7 @@ gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'bourbon'
 gem 'jquery-rails'
 gem 'ckeditor', '4.1.3'
+gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

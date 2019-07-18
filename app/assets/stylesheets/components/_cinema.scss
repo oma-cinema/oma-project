@@ -6,15 +6,10 @@
 
 .cinema-card {
   background-color: white !important;                         /* White background */
-  padding: 3.25rem 3rem 3.75rem;
   height: 19rem;
-  margin: 130px;
-  text-align: left;                       /* Internal space */
+  margin: 130px;                      /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  background-size: cover;
-   background-position: center;
-  background-repeat: no-repeat;
   h2 {
     font-size: 30px !important;
     font-family: 'Titillium Web', sans-serif;
@@ -25,6 +20,19 @@
     font-size: 20px;
     color: $blue;
   }
+}
+
+.cinema-card {
+  img {
+    height: 19rem;
+    width: 60%;
+    object-fit: cover;
+  }
+}
+
+.cinema-card-info {
+  padding: 3.25rem 3rem 3.75rem;
+  text-align: left;
 }
 
 .container {

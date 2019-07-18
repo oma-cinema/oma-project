@@ -73,7 +73,7 @@ a:hover
   margin-bottom: 3px;
   position: relative;
 
-  background: #cdcdcd;
+  background: white;
   border-radius: 0px;
 
   z-index: 1;
@@ -154,6 +154,14 @@ a:hover
 {
   padding: 10px 0;
   font-size: 22px;
+}
+
+#menu a:hover {
+  color: $red !important;
+}
+
+#menu img {
+  height: 70px;
 }
 
 /*

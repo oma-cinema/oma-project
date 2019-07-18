@@ -16,16 +16,28 @@ RailsAdmin.config do |config|
         field :title
         field :url_article
         field :photo
-        field :content
+        field :content, :wysihtml5
         field :date
         field :source
         end
+
+      edit do
+        field :tag_list
+        field :title
+        field :url_article
+        field :photo
+        field :content, :wysihtml5
+        field :date
+        field :source
+      end
+
+
       update do
         field :tag_list
         field :title
         field :url_article
         field :photo
-        field :content
+        field :content, :wysihtml5
         field :date
         field :source
       end
@@ -35,7 +47,7 @@ RailsAdmin.config do |config|
         field :title
         field :url_article
         field :photo
-        field :content
+        field :content, :wysihtml5
         field :date
         field :source
         end

@@ -28,8 +28,8 @@
     -->
     <ul id="menu" class="justify-content-center align-items-center text-center">
       <div>
-
       <% if user_signed_in? %>
+      <a><li><%= link_to "HOME", root_path %></li></a>
       <a><li><%= link_to "WHAT IS ŌMA ?", oma_path %></li></a>
       <a><li><%= link_to "EXPERIENCE", experience_path %></li></a>
       <a><li><%= link_to "LOCATIONS", cinemas_path %></li></a>

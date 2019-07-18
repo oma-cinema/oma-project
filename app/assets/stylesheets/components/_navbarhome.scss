@@ -40,7 +40,6 @@ Modules - reusable parts of our design
 .cd-img-replace {
   /* replace text with a background-image */
   display: inline-block;
-  overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
@@ -112,18 +111,13 @@ Main components
 }
 
 .cd-scroll-down {
-  position: absolute;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 20px;
-  width: 38px;
-  height: 44px;
-  background: url("../../assets/arrow.svg") no-repeat center center;
+
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+
 }
 
 /* No Touch devices */
@@ -192,16 +186,16 @@ Main components
   opacity: 1;
 }
 #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: white;
+  background-color: #d88683;
 }
 #cd-vertical-nav .cd-dot {
   position: relative;
   /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
   top: 8px;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  background-color: #d88683;
+  background-color: white;
   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
   -moz-transition: -moz-transform 0.2s, background-color 0.5s;
   transition: transform 0.2s, background-color 0.5s;

@@ -21,8 +21,11 @@
 
 .croix_noire {
   position: relative;
-  height: 100px;
-  left: 40%;
+  height: 70px;
+  left: 55%;
+  bottom: 25%;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 .grand_carre {
@@ -67,4 +70,13 @@
   top: 200px;
   z-index: 1;
   right: 100px;
+}
+
+.carre-gris-contact {
+  position: absolute;
+  z-index: 0;
+  width: 15%;
+  left: 100px;
+  top: 210px;
+  opacity: 0.5;
 }

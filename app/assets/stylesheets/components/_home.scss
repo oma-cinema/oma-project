@@ -2,6 +2,9 @@
   background-image: linear-gradient(rgba(25, 30, 85, 0.5), rgba(255, 255, 0, 0)),
                   url("./vue_interieur.jpg");
   background-size: cover;
+  .container {
+    flex-direction: column;
+  }
 }
 
 .home-contact {

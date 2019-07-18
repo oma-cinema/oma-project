@@ -11,3 +11,17 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.a.mapboxgl-ctrl-logo {
+  background-image: none;
+}
+
+
+#map1 > div.mapboxgl-control-container > div.mapboxgl-ctrl-bottom-left > div > a {
+  background-image: none;
+}
+
+
+#map1 > div.mapboxgl-control-container > div.mapboxgl-ctrl-bottom-right {
+  z-index: -1;
+}
