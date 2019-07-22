@@ -35,18 +35,26 @@
     <div class="row flex-column">
       <h1 class="pb-5">Press Articles</h1>
     </div>
-
-    <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
-      <div class="carousel-wrapper col-12">
-        <div class="carousel" data-flickity>
-          <% @articles.each do |article| %>
-            <div class="carousel-cell">
-              <%= link_to cl_image_tag(article.source), article_path(article) %>
-
-            </div>
+      <div class="d-flex">
+      <% array = [] %>
+        <% @articles.each do |article| %>
+          <% article.tag_list.each do |tage| %>
+            <% array << tage %>
           <% end %>
-        </div>
+        <% end %>
+      <% array.uniq.each do |tag| %>
+        <h2 class="pb-5 mr-4"><%= link_to tag, articles_path(tag: tag) %></h2>
+      <% end %>
       </div>
+    <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
+          <ul class="d-flex flex-column article-list text-left">
+            <% @articles.each do |article| %>
+              <li>
+                <%= article.date %>
+                <%= article.title %>
+              </li>
+            <% end %>
+          </ul>
     </div>
   </div>
 </section>

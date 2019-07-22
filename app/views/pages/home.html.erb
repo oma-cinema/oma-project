@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
 <%= content_for(:navbar_class, "navbar-home") %>
 <nav id="cd-vertical-nav">
     <ul style="list-style: none;">
@@ -35,6 +38,12 @@
         <a href="#section6" data-number="6">
           <span class="cd-dot"></span>
           <span class="cd-label">Contact</span>
+        </a>
+      </li>
+      <li>
+        <a href="#section7" data-number="7">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Articles</span>
         </a>
       </li>
     </ul>
@@ -128,4 +137,25 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="section7" class="cd-section">
+      <div class="container flex-column justify-content-center">
+    <div class="row flex-column">
+      <h1 class="pb-5" style="color: $blue !important;">Press Articles</h1>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
+      <div class="carousel-wrapper col-12">
+        <div class="carousel" data-flickity>
+          <% @articles.each do |article| %>
+            <div class="carousel-cell">
+              <%= link_to cl_image_tag(article.source), article_path(article) %>
+
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
   </section><!-- cd-section -->
