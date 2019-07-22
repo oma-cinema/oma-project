@@ -8,7 +8,7 @@
   <div class="mt-5 d-flex">
     <div class="article-content flex-column justify-content-center text-left col-12 col-lg-8 ml-5">
         <h1><%= @article.title %></h1>
-        <p><%= @article.date %></p>
+        <p><%= @article.date.strftime("%d of %B, %Y") %></p>
         <p class='mb-5'>
           <%= cl_image_tag @article.photo, width: 800, crop: :fill %>
         </p>

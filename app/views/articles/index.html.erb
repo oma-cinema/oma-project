@@ -50,7 +50,7 @@
           <ul class="d-flex flex-column article-list text-left">
             <% @articles.each do |article| %>
               <li>
-                <%= article.date %>
+                <%= article.date.strftime("%d of %B, %Y") %>
                 <%= article.title %>
               </li>
             <% end %>
