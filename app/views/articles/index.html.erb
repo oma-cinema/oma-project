@@ -43,16 +43,18 @@
           <% end %>
         <% end %>
       <% array.uniq.each do |tag| %>
-        <h2 class="pb-5 mr-4"><%= link_to tag, articles_path(tag: tag) %></h2>
+        <h2 class="mr-4 btn btn-danger"><%= link_to tag, articles_path(tag: tag) %></h2>
       <% end %>
       </div>
     <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
           <ul class="d-flex flex-column article-list text-left">
             <% @articles.each do |article| %>
               <li>
-                <%= article.date.strftime("%d of %B, %Y") %>
-                <%= article.title %>
+                <h3><%= link_to article.title, article_path(article) %> <p>(<%= article.date.strftime("%d of %B, %Y") %>)</p></h3>
               </li>
+
+
+
             <% end %>
           </ul>
     </div>

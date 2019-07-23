@@ -23,3 +23,22 @@
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+.btn-danger {
+  font-size: 20px;
+  padding: 10px;
+  font-color: tomato !important;
+  border: 1px solid tomato;
+  background-color: transparent;
+  a {
+    color: tomato;
+  }
+}
+
+.btn-danger:hover {
+  background-color: tomato;
+  border: 1px solid tomato;
+  a {
+    color: $blue;
+  }
+}
