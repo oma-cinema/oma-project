@@ -19,7 +19,21 @@
     opacity: 0.6;
 }
 
+.croix_grise_article {
+  position: relative;
+    height: 70px;
+    width: 70px;
+    z-index: 3;
+    left: 186%;
+    opacity: 0.6;
+}
+
 .croix_grise:hover {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.croix_grise_article:hover {
   transform: rotate(360deg);
   transition: all 0.3s ease-in-out 0s;
 }

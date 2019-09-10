@@ -143,21 +143,20 @@
   </section>
 
   <section id="section7" class="cd-section" style="background-color:#191E55 !important">
-    <div class="mini-title d-flex flex-column justify-content-center ml-4">
+
+      <div class="container flex-column justify-content-center mb-5">
+        <div class="mini-title d-flex flex-column justify-content-center ml-4">
       <h3>Press</h3>
     </div>
-      <div class="container flex-column justify-content-center">
+        <a href="/articles"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise_article"></a>
         <h1 style="font-weight: 300;">Press releases</h1>
     <div class="row d-flex justify-content-center align-items-center" style=" height: 35%">
 
           <% @articles.each do |article| %>
-            <div class="carousel-cell">
+            <div class="carousel-cell col-9 col-lg-3">
               <%= link_to cl_image_tag(article.source), article_path(article) %>
             </div>
           <% end %>
     </div>
-    <h2 class="mr-4 btn btn-danger">
-      <a href="/articles">See more</a>
-    </h2>
   </div>
   </section><!-- cd-section -->
