@@ -127,14 +127,14 @@
         <div class="col-12 col-lg-6 p-5 d-flex align-items-flex-end">
           <div>
             <h1>Pierre Chican, Architect</h1>
-            <p>Specialized in the realization of cultural arenas and more particularly of cinemas for more than 20 years now, Pierre Chican designed two of the most successful cinema theaters in France : UGC Les Halles (4.5 million tickets sold in 2016) & UGC Bercy (3 million tickets sold in 2016) in Paris and many others projects in France (Pathé La Valette with the first IMAX laser cinema in France) and abroad.</p>
+            <p style="margin-top:30px">Specialized in the realization of cultural arenas and more particularly of cinemas for more than 20 years now, Pierre Chican designed two of the most successful cinema theaters in France : UGC Les Halles (4.5 million tickets sold in 2016) & UGC Bercy (3 million tickets sold in 2016) in Paris and many others projects in France (Pathé La Valette with the first IMAX laser cinema in France) and abroad.</p>
             <img src="../assets/grand_carre.png" alt="croix" class="grand_carre">
           </div>
         </div>
         <div class="col-12 col-lg-6 p-5 d-flex align-items-flex-end">
           <div>
             <h1>Nicolas Chican, Business Partner</h1>
-            <p>Nicolas Chican has a Master in Science of Management at EM LYON Business School. He majored in Services Marketing and developed strong skills in the entertainment and tourism industry. During his studies, Nicolas worked on a revenue management oriented solution for cinema tickets.</p>
+            <p  style="margin-top:30px">Nicolas Chican has a Master in Science of Management at EM LYON Business School. He majored in Services Marketing and developed strong skills in the entertainment and tourism industry. During his studies, Nicolas worked on a revenue management oriented solution for cinema tickets.</p>
             <img src="../assets/carre_gris.png" alt="croix" class="carre_gris">
           </div>
         </div>
@@ -142,20 +142,22 @@
     </div>
   </section>
 
-  <section id="section7" class="cd-section">
+  <section id="section7" class="cd-section" style="background-color:#191E55 !important">
     <div class="mini-title d-flex flex-column justify-content-center ml-4">
-      <h3 style="color:#191E55">Press</h3>
+      <h3>Press</h3>
     </div>
       <div class="container flex-column justify-content-center">
-
-    <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
+        <h1 style="font-weight: 300;">Press releases</h1>
+    <div class="row d-flex justify-content-center align-items-center" style=" height: 35%">
 
           <% @articles.each do |article| %>
             <div class="carousel-cell">
               <%= link_to cl_image_tag(article.source), article_path(article) %>
             </div>
           <% end %>
-
     </div>
+    <h2 class="mr-4 btn btn-danger">
+      <a href="/articles">See more</a>
+    </h2>
   </div>
   </section><!-- cd-section -->

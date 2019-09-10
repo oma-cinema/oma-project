@@ -201,6 +201,10 @@ border:0px;
   margin-top: 10%;
 }
 
+@media only screen and (max-width:768px) {
+  .footer-100{margin-top:70%}
+}
+
 .border-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
 }

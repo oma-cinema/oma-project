@@ -46,6 +46,11 @@
   }
 }
 
+@media only screen and (max-width:650px) {
+.sunset{padding-right:70px;}
+}
+
+
 #section1 {
   background-color: $blue;
   background-repeat: no-repeat;
