@@ -52,12 +52,15 @@
 
   <section id="section1" class="cd-section home1">
     <div class="container justify-content-center">
+      <div>
+        <img src="../assets/logo.png" alt="logo oma" class="logo-oma-home">
+      </div>
       <div class="row text-left">
         <div class="col-12">
-          <h1 style="font-size: 100px; font-weight: bold;">Ōma Vertical <br> Cinema concept</h1>
+          <h1 style="font-size: 100px; font-weight: bold;"> Ōma, Vertical <br> Cinema <br> concept</h1>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" style="position: absolute; bottom:5vh;">
         <a href="#section2" class="cd-scroll-down"><i class="fas fa-chevron-down fa-3x"></i></a>
       </div>
     </div>
@@ -88,7 +91,7 @@
   </section><!-- cd-section -->
 
   <section id="section4" class="cd-section">
-    <div class="mini-title d-flex flex-column justify-content-center">
+    <div class="mini-title d-flex flex-column justify-content-center ml-4">
       <h3>Partners</h3>
     </div>
     <div class="container">
@@ -116,7 +119,7 @@
   </section><!-- cd-section -->
 
   <section id="section6" class="cd-section">
-    <div class="mini-title d-flex flex-column justify-content-center">
+    <div class="mini-title d-flex flex-column justify-content-center ml-4">
       <h3>Team</h3>
     </div>
     <div class="container">
@@ -140,22 +143,19 @@
   </section>
 
   <section id="section7" class="cd-section">
-      <div class="container flex-column justify-content-center">
-    <div class="row flex-column">
-      <h1 class="pb-5 article-home" style="color: $blue !important;">Press Articles</h1>
+    <div class="mini-title d-flex flex-column justify-content-center ml-4">
+      <h3 style="color:#191E55">Press</h3>
     </div>
+      <div class="container flex-column justify-content-center">
 
     <div class="row d-flex justify-content-center align-items-center mt-5" style=" height: 28%">
-      <div class="carousel-wrapper col-12">
-        <div class="carousel" data-flickity>
+
           <% @articles.each do |article| %>
             <div class="carousel-cell">
               <%= link_to cl_image_tag(article.source), article_path(article) %>
-
             </div>
           <% end %>
-        </div>
-      </div>
+
     </div>
   </div>
   </section><!-- cd-section -->

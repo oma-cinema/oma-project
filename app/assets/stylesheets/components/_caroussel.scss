@@ -1,5 +1,13 @@
-.carousel-indicators {
-  position: relative;
+// Carousel home
+.carousel-cell {
+  width: 17vw !important;
+  padding: 20px;
+}
+
+.carousel-cell {
+  img:hover {
+    width: 20vw;
+  }
 }
 
 
@@ -103,3 +111,15 @@
 .carousel-wrapper .flickity-viewport, .carousel-wrapper .flickity-slider {
   overflow: visible;
 }
+
+
+
+// carousel cinema
+.carousel {
+  position: inherit;
+}
+
+.carousel-inner {
+  position: absolute;
+}
+

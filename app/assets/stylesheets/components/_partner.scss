@@ -2,6 +2,18 @@
   height: 200px;
 }
 
+@media only screen and (max-width:1150px) {
+.pathe{margin-bottom:100px;}
+}
+
+@media only screen and (max-width:650px) {
+.pathe{height:100px;}
+}
+
 .french-tech {
   height: 200px;
+}
+
+@media only screen and (max-width:650px) {
+.french-tech{height:100px; padding-left:0px !important;}
 }
