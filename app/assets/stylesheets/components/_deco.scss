@@ -15,7 +15,6 @@
     height: 100px;
     width: 100px;
     z-index: 3;
-    left: 56%;
     opacity: 0.6;
 }
 
@@ -24,7 +23,6 @@
     height: 70px;
     width: 70px;
     z-index: 3;
-    left: 186%;
     opacity: 0.6;
 }
 
@@ -41,9 +39,8 @@
 .croix_noire {
   position: relative;
   height: 70px;
-  left: 55%;
   bottom: 25%;
-  z-index: 0;
+  z-index: 3;
   opacity: 0.5;
 }
 

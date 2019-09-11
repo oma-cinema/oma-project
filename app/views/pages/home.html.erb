@@ -56,8 +56,8 @@
         <img src="../assets/logo.png" alt="logo oma" class="logo-oma-home">
       </div>
       <div class="row text-left">
-        <div class="col-12">
-          <h1 style="font-size: 100px; font-weight: bold;"> Ōma, Vertical <br> Cinema <br> concept</h1>
+        <div class="col-12 titre-home">
+          <h1 style="font-size: 70px; font-weight: bold;"> Ōma, Vertical <br> Cinema <br> concept</h1>
         </div>
       </div>
       <div class="row justify-content-center" style="position: absolute; bottom:5vh;">
@@ -71,8 +71,8 @@
       <div class="row justify-content-center">
         <div class="col-12">
           <i class="fas fa-quote-left fa-7x"></i>
-          <h2>Whereas all the cinemas built for more than 50 years now are similar and reproduce the same seating arrangement of the spectators, this concept of movie theater creates a cinematographic experience at the same time intimate, spectacular and immersive, making Ōma unique in the global cinematographic landscape.</h2>
-          <h4 id="pchican">Pierre Chican, CEO</h4>
+          <h4>Whereas all the cinemas built for more than 50 years now are similar and reproduce the same seating arrangement of the spectators, this concept of movie theater creates a cinematographic experience at the same time intimate, spectacular and immersive, making Ōma unique in the global cinematographic landscape.</h4>
+          <h5 id="pchican">Pierre Chican, CEO</h5>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
         <div class="unforget col-12 col-lg-6">
           <h1>AN UNFORGETTABLE EXPERIENCE</h1>
           <p>Much more than just the spectacular nature of the architecture, the original configuration of the room has been designed to offer viewers an exceptional audio and visual experience, projecting an image free of any distortion. Ōma is an experience that you will never forget.</p>
-          <a href="/experience"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise"></a>
+          <a href="/experience" style="width: 100px; position: relative; left: 56%;"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise"></a>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@
 
   <section id="section5" class="cd-section home5">
     <div class="container">
-      <a href="/architecture"><img src="../assets/croix_noire.png" alt="croix" class="croix_noire"></a>
+      <a href="/architecture" style="position: relative; left: 7%;"><img src="../assets/croix_noire.png" alt="croix" class="croix_noire"></a>
       <div class="row">
         <div class="col-lg-6">
         </div>
@@ -143,20 +143,15 @@
   </section>
 
   <section id="section7" class="cd-section" style="background-color:#191E55 !important">
-
-      <div class="container flex-column justify-content-center mb-5">
-        <div class="mini-title d-flex flex-column justify-content-center ml-4">
-      <h3>Press</h3>
+    <div class="container flex-column justify-content-center mb-5">
+      <a href="/articles" style="position: relative; left: 20%;"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise_article"></a>
+      <h1 style="font-weight: 500; color: white;">Press releases</h1>
+      <div class="row d-flex justify-content-center align-items-center" style=" height: 35%">
+        <% @articles.each do |article| %>
+          <div class="carousel-cell col-9 col-lg-3">
+            <%= link_to cl_image_tag(article.source), article_path(article) %>
+          </div>
+        <% end %>
+      </div>
     </div>
-        <a href="/articles"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise_article"></a>
-        <h1 style="font-weight: 300;">Press releases</h1>
-    <div class="row d-flex justify-content-center align-items-center" style=" height: 35%">
-
-          <% @articles.each do |article| %>
-            <div class="carousel-cell col-9 col-lg-3">
-              <%= link_to cl_image_tag(article.source), article_path(article) %>
-            </div>
-          <% end %>
-    </div>
-  </div>
   </section><!-- cd-section -->

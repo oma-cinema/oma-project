@@ -50,8 +50,12 @@
 
 .logo-oma-home {
   position: absolute;
-  width: 100px;
-  top: 3vh;
-  right: 3vw;
+  width: 80px;
+  top: 4vh;
+  right: 4vw;
+}
+
+@media only screen and (max-width:768px) {
+.titre-home{font-size: 50px;}
 }
 

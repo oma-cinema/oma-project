@@ -19,13 +19,11 @@
   flex-direction: column;
   text-align: left;
   width: 40vw;
+  margin-top: 50px;
   h1 {
     padding-bottom: 30px;
     font-weight: bold;
     font-size: 2rem;
-  }
-  p {
-    font-size: 1.6rem;
   }
 }
 
@@ -36,19 +34,22 @@
   width: 40vw;
   color: white;
   text-align: right;
+  margin-top: 50px;
   h1 {
     padding-bottom: 30px;
     font-weight: bold;
     font-size: 2rem;
-  }
-  p {
-    font-size: 1.6rem;
   }
 }
 
 @media only screen and (max-width:650px) {
 .sunset{padding-right:70px;}
 }
+
+#section7 {
+  min-height: 70% !important;
+}
+
 
 
 #section1 {
