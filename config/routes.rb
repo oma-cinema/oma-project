@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contact
   get 'ōma', to: 'pages#ōma', as: :oma
   get 'experience', to: 'pages#experience', as: :experience
+  get 'soon', to: 'pages#soon', as: :soon
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :articles
   resources :cinemas do
