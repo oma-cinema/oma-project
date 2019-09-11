@@ -17,7 +17,7 @@ gem 'uglifier'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'webpacker'
 gem 'geocoder'
-gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
