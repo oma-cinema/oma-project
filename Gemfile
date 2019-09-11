@@ -30,6 +30,7 @@ gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'sqlite3'
 end
 
 group :development, :test do
@@ -39,4 +40,9 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+end
+
+group :production do
+ gem 'pg', '~> 0.21'
+ gem 'rails_12factor'
 end
