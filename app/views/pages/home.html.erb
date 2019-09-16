@@ -149,14 +149,14 @@
     </div>
   </section>
 
-  <section id="section7" class="cd-section" style="background-color:#191E55 !important">
+  <section id="section7" class="cd-section" style="background-color:white !important">
     <div class="container flex-column justify-content-center mb-5">
-      <a href="/articles" style="position: relative; left: 20%;"><img src="../assets/croix_grise.png" alt="croix" class="croix_grise_article"></a>
-      <h1 style="font-weight: 500; color: white;">Press releases</h1>
+      <a href="/articles" style="position: relative; left: 20%;"><img src="../assets/croix_bleu.png" alt="croix" class="croix_grise_article"></a>
+      <h1 style="font-weight: bold; color: #191E55;">Press releases</h1>
       <div class="row d-flex justify-content-center align-items-center" style=" height: 35%">
         <% @articles.each do |article| %>
           <div class="carousel-cell col-9 col-lg-3">
-            <%= link_to cl_image_tag(article.source), article_path(article) %>
+            <%= link_to cl_image_tag(article.source), article_path(article), class: "hover-logo-articles" %>
           </div>
         <% end %>
       </div>
