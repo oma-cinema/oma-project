@@ -1,7 +1,9 @@
 .form-post {
   .btn {
-    width: 100%;
+    width: 15%;
     padding: 10px;
+    border-radius: 40px !important;
+    background-color: tomato;
   }
   h1 {
     padding-bottom: 30px;
@@ -33,10 +35,10 @@
 }
 
 .form-control {
-  height: 6rem;
-  font-size: 20px;
+  height: 3rem;
+  font-size: 15px;
   color: $blue;
-  border-radius: 0px;
+  border-radius: 40px;
 }
 
 .simple_form {

@@ -59,6 +59,18 @@ Main components
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #map1 {position: relative;}
+}
+
+@media only screen and (max-width: 600px) {
+  .home-contact .row {margin-right: 0px; padding-right: 0px;}
+}
+
+@media only screen and (max-width: 600px) {
+  .home-contact .container {margin-right: 0px; padding-right: 0px; width: 70%;}
+}
+
 .section {
   margin: 0 auto;
 }
