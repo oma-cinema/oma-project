@@ -1,4 +1,5 @@
 <%= content_for(:navbar_class, "navbar-home") %>
+<%= content_for(:navbar_class, "navbar-home") %>
 <nav id="cd-vertical-nav">
     <ul style="list-style: none;">
       <li>
@@ -35,7 +36,7 @@
           <h4>nchican@omacinema.com</h4>
           <a href="#section2" class="cd-scroll-down btn-outline-danger btn mb-5 mt-4">Contact Us</a>
         </div>
-        <div id="map1" class="col-12 col-lg-6"  style="width: 500px; height: 300px;" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        <div id="map1" class="col-12 col-lg-6"  style="width: 500px; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
     </div>

@@ -145,7 +145,7 @@ width: 60px;
 }
 
 .subscribe__btn:hover i{
-    color:#ff3666;
+    color:tomato;
 }
 button {
     padding: 0;
@@ -190,9 +190,8 @@ list-style: outside none none;
 }
 }
 .social_profile ul li a:hover{
-background:#ff3666;
-border: 1px solid #ff3666;
-color:#fff;
+border: 1px solid;
+color:tomato;
 border:0px;
 }
 
@@ -222,4 +221,4 @@ border:0px;
     text-align: center;
 }
 .copyright a{color:white;transition: all 0.2s ease 0s;}
-.copyright a:hover{color:#ff3666;}
+.copyright a:hover{color:tomato;}
