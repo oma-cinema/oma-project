@@ -53,7 +53,9 @@
   <section id="section1" class="cd-section home1">
     <div class="container justify-content-center">
       <div>
-        <img src="/assets/logo.png" alt="logo oma" class="logo-oma-home">
+        <!-- <img src="/assets/logo.png" alt="logo oma" class="logo-oma-home"> -->
+        <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
+      width: 400, height: 300, crop: :fill) class: "logo-oma-home"%>
       </div>
       <div class="row text-left">
         <div class="col-12 titre-home">
