@@ -1,6 +1,6 @@
 .home1 {
   background-image: linear-gradient(rgba(25, 30, 85, 0.5), rgba(255, 255, 0, 0)),
-                  url("./vue_interieur.jpg");
+                  image-url("./vue_interieur.jpg");
   background-size: cover;
   .container {
     flex-direction: column;
@@ -12,19 +12,19 @@
 }
 
 .home2 {
-  background-image: url("./foyer_oma.jpg");
+  background-image: image-url("./foyer_oma.jpg");
   background-size: cover;
   padding: 0px !important;
 }
 
 .home3 {
-  background-image: url("./vue_interieur_salle.jpg");
+  background-image: image-url("./vue_interieur_salle.jpg");
   background-size: cover;
   padding: 0px !important;
 }
 
 .home4 {
-  background-image: url("./fond1.jpg");
+  background-image: image-url("./fond1.jpg");
   background-size: cover;
   padding: 0px !important;
 }
@@ -37,7 +37,7 @@
 }
 
 .home5 {
-  background-image: url("./sunset.jpg");
+  background-image: image-url("./sunset.jpg");
   background-size: cover;
   padding: 0px !important;
 }
