@@ -5,6 +5,12 @@
   padding: 20px;
 }
 
+.carousel-cell:hover {
+  -ms-transform: scale(1.20); /* IE 9 */
+  -webkit-transform: scale(1.20); /* Safari 3-8 */
+  transform: scale(1.20);
+}
+
 @media only screen and (max-width:992px) {
   .carousel-cell a{width:300px;}
 }
