@@ -14,12 +14,29 @@
 
 .fa-chevron-down {
   color: white;
-
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+    }
+
+@keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
+@media only screen and (min-width:750px) {
+  .fa-chevron-down { position: relative; right: 26vw;}
 }
 
 .btn-danger {

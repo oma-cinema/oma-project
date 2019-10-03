@@ -1,6 +1,5 @@
 .home1 {
-  background-image: linear-gradient(rgba(25, 30, 85, 0.5), rgba(255, 255, 0, 0)),
-                  image-url("vue_interieur.jpg");
+  background-image: image-url("vue_interieur.jpg");
   background-size: cover;
   .container {
     flex-direction: column;
@@ -43,6 +42,7 @@
 }
 
 .mini-title {
+  position: relative;
   h3 {
     transform: rotate(-90deg);
   }
@@ -61,4 +61,12 @@
 
 .team {
   height: 25%;
+}
+
+@media only screen and (min-width:800px) {
+.pierre-chican{height: 50vh;}
+}
+
+@media only screen and (min-width:700px) {
+.nicolas-chican{height: 40vh;}
 }
