@@ -2,7 +2,8 @@
   .btn {
     width: 15%;
     padding: 10px;
-    border-radius: 40px !important;
+    border-radius: 0px !important;
+    margin-top: 20px;
   }
   h1 {
     padding-bottom: 30px;
@@ -12,7 +13,7 @@
 }
 
 #message_body {
-  height: 200px;
+  height: 150px;
   background-color: transparent;
   color: white;
 }
@@ -37,7 +38,10 @@
   height: 3rem;
   font-size: 15px;
   color: $blue;
-  border-radius: 40px;
+  border-radius: 0px;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
 }
 
 .simple_form {
@@ -45,3 +49,4 @@
     border-radius: 0px;
   }
 }
+

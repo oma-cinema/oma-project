@@ -56,6 +56,10 @@ Main components
   text-align: center;
   #map1 {
     text-align: left !important;
+    // box-shadow: 12px 12px 0px 1px #525780;
+    border-radius: 4px;                        /* Small radius */
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    padding-left: 0px;
   }
 }
 

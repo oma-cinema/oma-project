@@ -1,5 +1,4 @@
 <%= content_for(:navbar_class, "navbar-home") %>
-<%= content_for(:navbar_class, "navbar-home") %>
 <nav id="cd-vertical-nav">
     <ul style="list-style: none;">
       <li>
@@ -29,11 +28,11 @@
       <div class=" row d-flex justify-content-between mx-5 px-5 my-5">
         <div class="contact-info col-12 col-lg-6 text-left">
           <img src="../assets/logo.png" alt="logo">
-          <h3>38, rue de Trévise</h3>
-          <h3>75009 Paris</h3>
-          <h3>France</h3>
-          <h4>+33 1 42 00 11 24</h4>
-          <h4>nchican@omacinema.com</h4>
+          <h5>38, rue de Trévise</h5>
+          <h5>75009 Paris</h5>
+          <h5>France</h5>
+          <h5>+33 1 42 00 11 24</h5>
+          <h5>nchican@omacinema.com</h5>
           <a href="#section2" class="cd-scroll-down btn-outline-danger btn mb-5 mt-4">Contact Us</a>
         </div>
         <div id="map1" class="col-12 col-lg-6"  style="width: 500px; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -53,17 +52,18 @@
               <%= @message.errors.full_messages.join(', ') %>
               <div class="row ml-0 pt-5">
                 <div class="col-xs-6 col-sm-6 pl-0 name-contact">
-                  <%= f.input :name, placeholder: "name" %>
+                  <%= f.input :name, placeholder: "Name" %>
                 </div>
                 <div class="col-xs-6 col-sm-6 pr-0 email-contact">
-                  <%= f.input :email, placeholder: 'email' %>
+                  <%= f.input :email, placeholder: 'Email' %>
                 </div>
               </div>
-              <%= f.input :body, placeholder: 'your message...' %>
+              <%= f.input :body, placeholder: 'Your message...' %>
               <%= f.submit 'Send', class: 'btn btn-outline-danger'%>
             <% end %>
           </div>
         </div>
         </div>
       </div>
-  </section><!-- cd-section -->
+  </section>
+<!-- cd-section -->
