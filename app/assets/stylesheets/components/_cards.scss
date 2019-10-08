@@ -1,12 +1,19 @@
 
 .card {
-  background-color: $blue;
+  background: $blue;                         /* White background */
+  // padding: 30px;                             /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 3px 8px white;
   opacity: 1;
   border:none;
   width: 95%;
   height: 200px;
-  .btn-primary {
-    width: 50%;
+  color: white;
+  .btn-danger {
+    width: 40%;
+    color: tomato;
+    font-size: 1rem !important;
+    border-radius: 4px;
   }
 }
 
