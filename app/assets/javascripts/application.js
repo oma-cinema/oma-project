@@ -137,6 +137,20 @@ $(document).ready(function(){
   });
 });
 
- // Fog for coming soon
+ // animated icon
+
+ function soundon() {
+  var a;
+  a = document.getElementById("sounding");
+  a.innerHTML = "&#xf026;";
+  setTimeout(function () {
+    a.innerHTML = "&#xf027;";
+  }, 1000);
+  setTimeout(function () {
+    a.innerHTML = "&#xf028;";
+  }, 2000);
+}
+soundon();
+setInterval(soundon, 3000);
 
 

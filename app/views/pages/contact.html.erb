@@ -1,3 +1,6 @@
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
+
 <%= content_for(:navbar_class, "navbar-home") %>
 <nav id="cd-vertical-nav">
     <ul style="list-style: none;">
@@ -20,7 +23,6 @@
   <section id="section1" class="cd-section home-contact">
     <div class="container flex-column justify-content-center">
       <div class="row justify-content-center pb-5 mt-5">
-        <h1 class="lg-12">Contact</h1>
         <br>
         <br>
       </div>
@@ -33,10 +35,11 @@
           <h5>France</h5>
           <h5>+33 1 42 00 11 24</h5>
           <h5>nchican@omacinema.com</h5>
-          <a href="#section2" class="cd-scroll-down btn-outline-danger btn mb-5 mt-4">Contact Us</a>
+          <a href="#section2" class="cd-scroll-down btn-primary btn mb-5 mt-4 pl-3 pr-3 mt-3 pt-2 pb-2">Contact Us</a>
         </div>
-        <div id="map1" class="col-12 col-lg-6"  style="width: 500px; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        <div id="map" class="col-12 col-lg-6"  style="width: 500px; height: 300px;" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
+
       </div>
     </div>
   </section><!-- cd-section -->
@@ -59,7 +62,7 @@
                 </div>
               </div>
               <%= f.input :body, placeholder: 'Your message...' %>
-              <%= f.submit 'Send', class: 'btn btn-outline-danger'%>
+              <%= f.submit 'Send', class: 'btn btn-primary pl-5 pr-5 mt-3 pt-2 pb-2'%>
             <% end %>
           </div>
         </div>
@@ -67,3 +70,43 @@
       </div>
   </section>
 <!-- cd-section -->
+<script>
+  mapboxgl.accessToken = "<%= ENV['MAPBOX_API_KEY'] %>";
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/omacinema/cjxm8qwxn0jim1cocy9oyxv70', // stylesheet location
+center: [2.3455562, 48.8753697], // starting position [lng, lat]
+zoom: 12 // starting zoom
+});
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [2.3455562, 48.8753697]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Washington, D.C.'
+    }
+  },
+  ]
+};
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+});
+</script>
+
+

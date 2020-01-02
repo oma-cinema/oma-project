@@ -54,7 +54,7 @@ Main components
   display: flex;
   padding: 0;
   text-align: center;
-  #map1 {
+  #map {
     text-align: left !important;
     // box-shadow: 12px 12px 0px 1px #525780;
     border-radius: 4px;                        /* Small radius */
@@ -64,7 +64,7 @@ Main components
 }
 
 @media only screen and (max-width: 600px) {
-  #map1 {position: relative;}
+  #map {position: relative;}
 }
 
 @media only screen and (max-width: 600px) {

@@ -13,7 +13,7 @@ $font-size-base: 1rem;
 $body-color: $gray;
 $primary:    $blue;
 $success:    $green;
-$info:       $yellow;
+// $info:       $yellow;
 $danger:     $red;
 $warning:    $orange;
 
@@ -24,8 +24,3 @@ $border-radius-sm: 4px;
 
 // Override other variables below!
 
-.btn-primary {
-  padding: 10px;
-  font-size: 1.25rem;
-
-}

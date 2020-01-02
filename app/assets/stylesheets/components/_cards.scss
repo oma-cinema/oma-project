@@ -3,18 +3,12 @@
   background: $blue;                         /* White background */
   // padding: 30px;                             /* Internal space */
   border-radius: 4px;                        /* Small radius */
-  box-shadow: 0 3px 8px white;
+  box-shadow: 0 8px 43px rgba(0, 0, 0, 0.1);
   opacity: 1;
   border:none;
   width: 95%;
   height: 200px;
   color: white;
-  .btn-danger {
-    width: 40%;
-    color: tomato;
-    font-size: 1rem !important;
-    border-radius: 4px;
-  }
 }
 
 .card:hover {
