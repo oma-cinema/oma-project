@@ -21,7 +21,7 @@ gem 'remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'bourbon'
 gem 'jquery-rails'
